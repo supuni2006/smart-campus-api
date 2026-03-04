@@ -1,0 +1,7 @@
+com/smartcampus/resource/SensorsResource.class
+com/smartcampus/SmartCampusApplication.class
+com/smartcampus/model/Room.class
+com/smartcampus/Main.class
+com/smartcampus/store/DataStore.class
+com/smartcampus/resource/RoomsResource.class
+com/smartcampus/resource/RootResource.class
