@@ -13,10 +13,10 @@ public class RootResource {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public Map<String, Object> discovery() {
-
         return Map.of(
                 "name", "Smart Campus API",
                 "version", "v1",
+                "contact", "admin@smartcampus.ac.uk",
                 "links", Map.of(
                         "rooms", "/api/v1/rooms",
                         "sensors", "/api/v1/sensors"
