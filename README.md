@@ -375,7 +375,7 @@ HATEOAS (Hypermedia as the Engine of Application State) means the API embeds nav
 
 --------------------------------------------------
 
-Part 2 – Room Management
+## 🧩 Part 2 – Room Management
 
 Q2.1: When returning a list of rooms, what are the implications of returning only IDs versus returning the full room objects? Consider network bandwidth and client side processing.
 
@@ -389,7 +389,7 @@ Yes, the DELETE operation is idempotent. REST defines idempotency as: calling th
 
 --------------------------------------------------
 
-Part 3 – Sensor Operations & Filtering
+## 🧩 Part 3 – Sensor Operations & Filtering
 
 Q3.1: We explicitly use the @Consumes (MediaType.APPLICATION_JSON) annotation on the POST method. Explain the technical consequences if a client attempts to send data in a different format, such as text/plain or application/xml. How does JAX-RS handle this mismatch?
 
@@ -405,7 +405,7 @@ Query parameters (/sensors?type=CO2) are the correct semantic tool for optional 
 
 --------------------------------------------------
 
-Part 4 – Sub-Resources
+## 🧩 Part 4 – Sub-Resources
 
 Q4.1: Discuss the architectural benefits of the Sub-Resource Locator pattern. How does delegating logic to separate classes help manage complexity in large APIs compared to defining every nested path (e.g., sensors/{id}/readings/{rid}) in one massive controller class?
 
@@ -413,7 +413,7 @@ Without sub-resource locators, every nested path would be defined inside one cla
 
 --------------------------------------------------
 
-Part 5 – Advanced Error Handling & Exception Mapping
+## 🧩 Part 5 – Advanced Error Handling & Exception Mapping
 
 Q5.1: Why is HTTP 422 often considered more semantically accurate than a standard 404 when the issue is a missing reference inside a valid JSON payload?
 
