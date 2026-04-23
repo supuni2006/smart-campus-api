@@ -438,4 +438,12 @@ A raw Java stack trace is an information disclosure vulnerability. It exposes:
 
 * The GenericErrorMapper in this project intercepts all unexpected Throwable errors before they reach the HTTP response      and returns only a generic {"error": "INTERNAL_ERROR", "message": "An unexpected error occurred."} body. This eliminates   the information leakage entirely while still signalling to the client that something went wrong on the server side.
 
+--------------------------------------------------
+Q5.3: Why is it advantageous to use JAX-RS filters for cross-cutting concerns like
+logging, rather than manually inserting Logger.info() statements inside every single re-
+source method?
+
+JAX-RS filters offer many advantages over simply doing manual logging , Single place to modify changing the log format in one place is propagated automatically to all endpoints. Guarantee of execution New endpoints are covered automatically; with manual logging, the call to log is often forgotten. Isolation of concerns Resource methods can focus on business logic without being distracted by the infrastructure. Composability, Multiple filters can be chained and ordered by @Priority without changing resource classes.
+
+
 *University of Westminster – 5COSC022W Client-Server Architectures – 2025/26*
